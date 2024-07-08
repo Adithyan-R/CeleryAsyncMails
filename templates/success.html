@@ -6,6 +6,6 @@
 </head>
 <body>
   <p>Your task ID is: {{ task_id }}</p>
-    <p>Check the status of your task <a href="{% url 'check_email_task' task_id %}">here</a>.</p>
+  <p>Check the status of your task <a href="/myapp/check-email/{{ task_id }}/">here</a>.</p>
 </body>
 </html>

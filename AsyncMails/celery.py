@@ -16,7 +16,7 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 # Load task modules from all registered Django app configs.
 app.autodiscover_tasks()
 
-'''
+
 from celery.schedules import crontab
 
 app.conf.beat_schedule = {
@@ -24,7 +24,8 @@ app.conf.beat_schedule = {
         'task': 'myapp.tasks.periodic_task',
         'schedule': crontab(minute='*/1'),  # every minute
     },
-}'''
+}
+
 
 @app.task(bind=True)
 def debug_task(self):

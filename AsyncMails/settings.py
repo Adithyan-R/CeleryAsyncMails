@@ -139,5 +139,8 @@ CELERY_RESULT_BACKEND = 'redis://localhost:6379/0' '''
 
 
 
-##celery -A AsyncMails worker --loglevel=info
+##celery -A AsyncMails worker --loglevel=info ---> Not working
 # celery -A AsyncMails beat --loglevel=info
+
+## celery -A AsyncMails worker --loglevel=info --pool=solo  ---> This was working fine
+
